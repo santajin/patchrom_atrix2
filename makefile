@@ -11,12 +11,12 @@ local-out-zip-file := MIUI_Atrix2.zip
 local-previous-target-dir := ~/workspace/ota_base/me865
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps :=
+local-modified-apps := Gallery2
 #MediaProvider
 
 local-modified-jars :=
 
-local-miui-modified-apps :=
+local-miui-modified-apps := MiuiHome Phone ThemeManager Music Mms MiuiCompass PackageInstaller
 ##Mms MiuiHome Settings Phone ThemeManager TelephonyProvider
 # All apks from MIUI
 local-miui-removed-apps  := MediaProvider
