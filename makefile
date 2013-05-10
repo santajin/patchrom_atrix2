@@ -91,3 +91,18 @@ local-put-to-phone:
 #enter recovery
 #echo 1 > /data/.recovery_mode ; sync ; reboot ;
 
+%.phone : out/%.jar
+	@echo push -- to --- phone
+	adb remount
+	adb push $< /system/framework
+	adb shell chmod 644 /system/framework/$*.jar
+	#adb shell stop
+	#adb shell start
+	#adb reboot
+
+%.sign-plat : out/%
+	java -jar $(TOOL_DIR)/signapk.jar $(PORT_ROOT)/build/security/platform.x509.pem $(PORT_ROOT)/build/security/platform.pk8  $< $<.signed
+	@echo push -- to --- phone
+	adb remount
+	adb push $<.signed /system/app/$*
+	adb shell chmod 644 /system/app/$*

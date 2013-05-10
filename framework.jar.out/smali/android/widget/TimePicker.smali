@@ -1554,7 +1554,10 @@
 .method public setIs24HourView(Ljava/lang/Boolean;)V
     .locals 3
     .parameter "is24HourView"
-
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+    
     .prologue
     .line 422
     iget-boolean v1, p0, Landroid/widget/TimePicker;->mIs24HourView:Z
