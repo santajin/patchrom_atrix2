@@ -6,26 +6,26 @@ private-phone-apps := \
 		  CertInstaller \
 		  DefaultContainerService \
 		  DrmProvider \
-		  DSPManager \
+#		  DSPManager \
 		  FaceLock \
 		  Gallery2 \
 		  GmsCore \
 		  HTMLViewer \
 		  InputDevices \
 		  KeyChain \
-		  LatinIME \
+#		  LatinIME \
 		  LatinImeDictionaryPack \
-		  LiveWallpapers \
-		  LiveWallpapersPicker \
+#		  LiveWallpapers \
+#		  LiveWallpapersPicker \
 		  MediaUploader \
 		  MediaProvider \
 		  PhaseBeam \
 		  Stk \
 		  UserDictionaryProvider \
-		  VideoEditor \
+#		  VideoEditor \
 		  VisualizationWallpapers \
-		  VoiceDialer \
-		  VoiceSearchStub \
+#		  VoiceDialer \
+#		  VoiceSearchStub \
 		  WAPPushManager
 
 #		  Phonesky \

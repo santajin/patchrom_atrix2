@@ -78,6 +78,7 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/tts
 	rm -rf $(ZIP_DIR)/system/vendor/app
 	rm -rf $(ZIP_DIR)/system/bin/su
+	cp other/baiduinput.apk $(ZIP_DIR)/data/media/preinstall_apps/
 
 local-put-to-phone:
 #	rm -f $(local-out-zip-file)
