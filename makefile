@@ -79,6 +79,7 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/vendor/app
 	rm -rf $(ZIP_DIR)/system/bin/su
 	cp other/baiduinput.apk $(ZIP_DIR)/data/media/preinstall_apps/
+	cp other/Gallery2.apk $(ZIP_DIR)/system/app/
 
 local-put-to-phone:
 #	rm -f $(local-out-zip-file)
