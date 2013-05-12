@@ -1,31 +1,23 @@
-local-phone-apps = $(private-phone-apps)
 
-private-phone-apps := \
+local-phone-apps = ApplicationsProvider \
 		  ApplicationsProvider \
 		  BluetoothSCOApp \
 		  CertInstaller \
 		  DefaultContainerService \
 		  DrmProvider \
-#		  DSPManager \
 		  FaceLock \
 		  Gallery2 \
 		  GmsCore \
 		  HTMLViewer \
 		  InputDevices \
 		  KeyChain \
-#		  LatinIME \
 		  LatinImeDictionaryPack \
-#		  LiveWallpapers \
-#		  LiveWallpapersPicker \
+		  LiveWallpapers \
+		  LiveWallpapersPicker \
 		  MediaUploader \
 		  MediaProvider \
 		  PhaseBeam \
 		  Stk \
 		  UserDictionaryProvider \
-#		  VideoEditor \
-		  VisualizationWallpapers \
-#		  VoiceDialer \
-#		  VoiceSearchStub \
 		  WAPPushManager
 
-#		  Phonesky \

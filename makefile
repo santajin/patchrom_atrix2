@@ -11,23 +11,16 @@ local-out-zip-file := MIUI_Atrix2.zip
 local-previous-target-dir := ~/workspace/ota_base/me865
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := Gallery2
-#MediaProvider
+local-modified-apps := 
+
 
 local-modified-jars :=
 
-local-miui-modified-apps := MiuiHome Phone ThemeManager Music Mms MiuiCompass PackageInstaller
-##Mms MiuiHome Settings Phone ThemeManager TelephonyProvider
-# All apks from MIUI
-local-miui-removed-apps  := MediaProvider
 
-# All apps need to be reserved from original ZIP file
-#local-phone-apps := FaceLock LatinImeDictionaryPack ApplicationsProvider
-#	CertInstaller ChargeOnlyMode DeepSleepService DrmProvider KeyChain LiveWallpapers \
-#	LiveWallpapersPicker MotorolaSettingsProvider MusicFX OMAPPowerMeter \
-#	OMAProvisioning OneTimeInitializer usbcamera UserDictionaryProvider VisualizationWallpapers \
-#	VoiceSearch DefaultContainerService ExtDispService MediaProvider SmartActions ContextEngine \
-#	DockComm DockService MotoDockHelperService SmartDock SmartActionFW SmartActionMFW DLNA SetupProvider
+# All apks from MIUI
+local-miui-removed-apps := MediaProvider Stk Bluetooth SoundRecorder
+local-miui-modified-apps := MiuiHome Settings Phone ThemeManager Music Mms MiuiCompass PackageInstaller
+
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
@@ -35,8 +28,6 @@ local-density := HDPI
 
 
 include phoneapps.mk
-
-#local-phone-apps += MediaProvider
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should:
@@ -57,7 +48,10 @@ updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 
 local-pre-zip-misc:
 	@echo Update build.prop
+	cp stockrom/system/bin/installd $(ZIP_DIR)/system/bin/installd
+	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
+	cp other/init.rc $(ZIP_DIR)/system/bootmenu/2nd-init/
 #
 #	@echo update bootanimation
 #	rm $(ZIP_DIR)/system/bin/bootanimation
@@ -79,7 +73,8 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/vendor/app
 	rm -rf $(ZIP_DIR)/system/bin/su
 	cp other/baiduinput.apk $(ZIP_DIR)/data/media/preinstall_apps/
-	cp other/Gallery2.apk $(ZIP_DIR)/system/app/
+	rm  -rf $(ZIP_DIR)/data/media/preinstall_apps/MiuiVideo.apk
+	#cp other/Gallery2.apk $(ZIP_DIR)/system/app/
 
 local-put-to-phone:
 #	rm -f $(local-out-zip-file)
