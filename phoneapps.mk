@@ -1,7 +1,7 @@
 
 local-phone-apps = ApplicationsProvider \
 		  ApplicationsProvider \
-		  BluetoothSCOApp \
+		  Bluetooth \
 		  CertInstaller \
 		  DefaultContainerService \
 		  DrmProvider \

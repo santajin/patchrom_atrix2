@@ -11,7 +11,7 @@ local-out-zip-file := MIUI_Atrix2.zip
 local-previous-target-dir := ~/workspace/ota_base/me865
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := 
+local-modified-apps := Gallery2
 
 
 local-modified-jars :=
@@ -49,6 +49,8 @@ updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 local-pre-zip-misc:
 	@echo Update build.prop
 	cp stockrom/system/bin/installd $(ZIP_DIR)/system/bin/installd
+	cp other/platform.xml $(ZIP_DIR)/system/etc/permissions/platform.xml
+	cp other/javax.btobex.jar $(ZIP_DIR)/system/framework/javax.btobex.jar
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 	cp other/init.rc $(ZIP_DIR)/system/bootmenu/2nd-init/
