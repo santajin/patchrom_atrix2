@@ -18,7 +18,7 @@ local-modified-jars :=
 
 
 # All apks from MIUI
-local-miui-removed-apps := MediaProvider Stk Bluetooth SoundRecorder
+local-miui-removed-apps := MediaProvider Stk
 local-miui-modified-apps := MiuiHome Settings Phone ThemeManager Music Mms MiuiCompass PackageInstaller
 
 
@@ -51,6 +51,7 @@ local-pre-zip-misc:
 	cp stockrom/system/bin/installd $(ZIP_DIR)/system/bin/installd
 	cp other/platform.xml $(ZIP_DIR)/system/etc/permissions/platform.xml
 	cp other/javax.btobex.jar $(ZIP_DIR)/system/framework/javax.btobex.jar
+	cp other/atmxt-i2c.kl $(ZIP_DIR)/system/usr/keylayout/
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 	cp other/init.rc $(ZIP_DIR)/system/bootmenu/2nd-init/
@@ -74,7 +75,9 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/tts
 	rm -rf $(ZIP_DIR)/system/vendor/app
 	rm -rf $(ZIP_DIR)/system/bin/su
+	cp ../miui/XHDPI/system/app/DeskClock.apk $(ZIP_DIR)/system/app/
 	cp other/baiduinput.apk $(ZIP_DIR)/data/media/preinstall_apps/
+	cp other/gps.conf $(ZIP_DIR)/system/etc/
 	rm  -rf $(ZIP_DIR)/data/media/preinstall_apps/MiuiVideo.apk
 	#cp other/Gallery2.apk $(ZIP_DIR)/system/app/
 

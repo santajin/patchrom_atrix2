@@ -43,7 +43,7 @@ persist.ril.modem.mode =1
 # This defines the max event window manager can
 # handle in 1 s. We may adjust this # for performance
 # reason later
-windowsmgr.max_events_per_sec=55
+windowsmgr.max_events_per_sec=150
 
 # USB modes allowed for UI and switching
 ro.ngp_available=1
@@ -236,9 +236,14 @@ ro.config.ringtone=MI.ogg
 ro.config.notification_sound=FadeIn.ogg
 ro.config.alarm_alert=GoodMorning.ogg
 ro.config.media_sound=FadeIn.ogg
+############
+net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960
 ro.carrier=unknown
 dalvik.vm.lockprof.threshold=500
-dalvik.vm.dexopt-flags=m=y
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 

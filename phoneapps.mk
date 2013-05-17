@@ -1,7 +1,5 @@
 
 local-phone-apps = ApplicationsProvider \
-		  ApplicationsProvider \
-		  Bluetooth \
 		  CertInstaller \
 		  DefaultContainerService \
 		  DrmProvider \
