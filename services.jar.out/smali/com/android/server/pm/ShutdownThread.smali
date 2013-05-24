@@ -767,12 +767,6 @@
     .line 124
     .local v3, resourceId:I
     :goto_1
-    
-    .line 1000008
-    invoke-static {v3}, Lcom/android/server/pm/ShutdownThread$Injector;->getResourceId(I)I
-
-    move-result v3
-    
     const-string v4, "ShutdownThread"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -866,10 +860,6 @@
 
     .line 180
     :goto_2
-    
-    .line 1000010
-    invoke-static {v1}, Lcom/android/server/pm/ShutdownThread$Injector;->setDialogTitle(Landroid/app/Dialog;)V
-
     iput-object v1, v0, Lcom/android/server/pm/ShutdownThread$CloseDialogReceiver;->dialog:Landroid/app/Dialog;
 
     .line 181
@@ -887,6 +877,7 @@
     .line 183
     invoke-virtual {v1}, Landroid/app/AlertDialog;->show()V
 
+    invoke-static {v1}, Lcom/android/server/pm/ShutdownThread$Injector;->setDialogPositiveButtonText(Landroid/app/AlertDialog;)V
     goto/16 :goto_0
 
     .line 114

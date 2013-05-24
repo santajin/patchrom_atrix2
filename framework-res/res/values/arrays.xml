@@ -582,6 +582,14 @@
         <item>3000</item>
     </integer-array>
     <integer-array name="config_autoBrightnessLcdBacklightValues">
+        <item>20</item>
+        <item>40</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+        <item>250</item>
+    </integer-array>
+    <integer-array name="config_autoBrightnessButtonBacklightValues">
         <item>60</item>
         <item>70</item>
         <item>80</item>
@@ -589,21 +597,13 @@
         <item>100</item>
         <item>250</item>
     </integer-array>
-    <integer-array name="config_autoBrightnessButtonBacklightValues">
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-    </integer-array>
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+        <item>250</item>
     </integer-array>
     <array name="config_twoDigitNumberPattern" />
     <array name="config_telephony_set_audioparameters" />
