@@ -466,6 +466,11 @@
         <item>id</item>
     </string-array>
     <string-array name="config_statusBarIcons">
+        <item>wimax</item>
+        <item>bluetooth_handsfree_battery</item>
+        <item>privacy_mode</item>
+        <item>call_record</item>
+        <item>headset</item>
         <item>ime</item>
         <item>sync_failing</item>
         <item>sync_active</item>

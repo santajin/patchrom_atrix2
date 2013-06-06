@@ -76,4 +76,5 @@
     <bool name="config_symKeyShowsImePicker">true</bool>
     <bool name="config_stylusGestures">false</bool>
     <bool name="lockscreen_isPortrait">true</bool>
+    <bool name="config_support_charging_LED">false</bool>
 </resources>

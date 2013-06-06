@@ -4,6 +4,6 @@ tmp-bak/
 bak/
 test/
 updater/
-stockrom.zip
+*.zip
 .delete-zip-file-when-clean
 *.pyc

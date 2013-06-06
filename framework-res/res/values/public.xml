@@ -6606,6 +6606,7 @@
     <public type="bool" name="config_symKeyShowsImePicker" id="0x01110049" />
     <public type="bool" name="config_stylusGestures" id="0x0111004a" />
     <public type="bool" name="lockscreen_isPortrait" id="0x0111004b" />
+    <public type="bool" name="config_support_charging_LED" id="0x0111004c" />
     <public type="fraction" name="config_dimBehindFadeDuration" id="0x01120000" />
     <public type="plurals" name="num_seconds_ago" id="0x01130000" />
     <public type="plurals" name="num_minutes_ago" id="0x01130001" />

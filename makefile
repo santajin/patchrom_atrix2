@@ -101,6 +101,12 @@ local-put-to-phone:
 	#adb shell start
 	#adb reboot
 
+%.test : out/%.apk
+	@echo push -- to --- phone
+	adb remount
+	java -jar $(TOOL_DIR)/signapk.jar $(PORT_ROOT)/build/security/platform.x509.pem $(PORT_ROOT)/build/security/platform.pk8  $< $<.signed
+	adb push $<.signed /system/framework/$*.apk
+	adb shell chmod 644 /system/framework/$*.apk
 %.sign-plat : out/%
 	java -jar $(TOOL_DIR)/signapk.jar $(PORT_ROOT)/build/security/platform.x509.pem $(PORT_ROOT)/build/security/platform.pk8  $< $<.signed
 	@echo push -- to --- phone
